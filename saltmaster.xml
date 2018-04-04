@@ -12,7 +12,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=</Support>
   <Registry>https://hub.docker.com/r/cmconner156/salt-master/</Registry>
   <GitHub>https://github.com/cmconner156/salt-master.git</GitHub>
-  <Repository>salt-master</Repository>
+  <Repository>cmconner156/salt-master</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
