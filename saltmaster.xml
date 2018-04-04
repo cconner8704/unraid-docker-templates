@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>Salt Master</Category>
+  <Name>salt-master</Name>
+  <Description>
+    Docker Salt Master
+  </Description>
+  <Overview>
+    Docker Salt Master
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
+  <Registry>https://hub.docker.com/r/cmconner156/salt-master/</Registry>
+  <GitHub>https://github.com/cmconner156/salt-master.git</GitHub>
+  <Repository>salt-master</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4505</HostPort>
+        <ContainerPort>4505</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4506</HostPort>
+        <ContainerPort>4506</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>VAR1</Name>
+      <Value>var1</Value>
+    </Variable>
+    <Variable>
+      <Name>VAR2</Name>
+      <Value>var2</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/salt-master/var/cache/salt</HostDir>
+      <ContainerDir>/var/cache/salt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/salt-master/var/log/salt</HostDir>
+      <ContainerDir>/var/log/salt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/salt-master/etc/salt/pki</HostDir>
+      <ContainerDir>/etc/salt/pki</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/salt-master/etc/salt/master.d</HostDir>
+      <ContainerDir>/etc/salt/master.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/salt-master/srv/salt</HostDir>
+      <ContainerDir>/srv/salt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Banner>https://github.com/cmconner156/salt-master/blob/master/saltstack.jpg?raw=true</Banner>
+  <Icon>https://github.com/cmconner156/salt-master/blob/master/saltstack.jpg?raw=true</Icon>
+</Container>
