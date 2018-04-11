@@ -72,6 +72,11 @@
   </Environment>
   <Data>
     <Volume>
+      <HostDir>/sys/fs/cgroup</HostDir>
+      <ContainerDir>/sys/fs/cgroup</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/run</HostDir>
       <ContainerDir>/run</ContainerDir>
       <Mode>rw</Mode>
