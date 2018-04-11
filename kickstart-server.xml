@@ -14,9 +14,9 @@
   <GitHub>https://github.com/cmconner156/kickstart-server.git</GitHub>
   <Repository>cmconner156/kickstart-server</Repository>
   <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
+  <Privileged>true</Privileged>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>eth0</Mode>
     <Publish>
       <Port>
         <HostPort>69</HostPort>
