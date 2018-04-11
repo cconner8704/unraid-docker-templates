@@ -82,6 +82,11 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/tftpboot</HostDir>
       <ContainerDir>/var/lib/tftpboot</ContainerDir>
       <Mode>rw</Mode>
