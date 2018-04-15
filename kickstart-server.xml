@@ -162,6 +162,13 @@
       <Name>kickstart /etc/salt/cloud.providers.d</Name>
       <Description>kickstart Salt Cloud config for creating VMs cloud.providers.d</Description>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/systems</HostDir>
+      <ContainerDir>/systems</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /systems</Name>
+      <Description>kickstart Salt Cloud for systems created</Description>
+    </Volume>
   </Data>
   <Banner>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Banner>
   <Icon>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Icon>
