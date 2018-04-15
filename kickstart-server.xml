@@ -169,6 +169,13 @@
       <Name>kickstart /systems</Name>
       <Description>kickstart Salt Cloud for systems created</Description>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/debmirror.conf</HostDir>
+      <ContainerDir>/etc/debmirror.conf</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /etc/debmirror.conf</Name>
+      <Description>kickstart file used by cobbler</Description>
+    </Volume>
   </Data>
   <Banner>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Banner>
   <Icon>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Icon>
