@@ -99,12 +99,19 @@
       <Name>cgroup directory for systemd</Name>
       <Description>cgroup directory for systemd</Description>
     </Volume>
-    <Volume>
+    <!--Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/run</HostDir>
       <ContainerDir>/run</ContainerDir>
       <Mode>rw</Mode>
       <Name>kickstart /run</Name>
       <Description>kickstart /run</Description>
+    </Volume-->
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/httpd</HostDir>
+      <ContainerDir>/etc/httpd</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /etc/httpd</Name>
+      <Description>kickstart /etc/httpd</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/mnt</HostDir>
