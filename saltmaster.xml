@@ -21,12 +21,16 @@
       <Port>
         <HostPort>4505</HostPort>
         <ContainerPort>4505</ContainerPort>
-        <Protocol>tcp</Protocol>
+	<Protocol>tcp</Protocol>
+        <Name>salt master tcp 4505</Name>
+        <Description>salt master tcp 4505</Description>
       </Port>
       <Port>
         <HostPort>4506</HostPort>
         <ContainerPort>4506</ContainerPort>
         <Protocol>tcp</Protocol>
+        <Name>salt master tcp 4506</Name>
+        <Description>salt master tcp 4506</Description>
       </Port>
     </Publish>
   </Networking>
@@ -34,10 +38,8 @@
     <Variable>
       <Name>VAR1</Name>
       <Value>var1</Value>
-    </Variable>
-    <Variable>
-      <Name>VAR2</Name>
-      <Value>var2</Value>
+      <Name>Var setup Reminder</Name>
+      <Description>Var setup reminder</Description>
     </Variable>
   </Environment>
   <Data>
@@ -45,26 +47,36 @@
       <HostDir>/mnt/user/appdata/salt-master/var/cache/salt</HostDir>
       <ContainerDir>/var/cache/salt</ContainerDir>
       <Mode>rw</Mode>
+      <Name>salt master /var/cache/salt</Name>
+      <Description>salt master /var/cache/salt</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/salt-master/var/log/salt</HostDir>
       <ContainerDir>/var/log/salt</ContainerDir>
       <Mode>rw</Mode>
+      <Name>salt master /var/log/salt</Name>
+      <Description>salt master /var/log/salt</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/salt-master/etc/salt/pki</HostDir>
       <ContainerDir>/etc/salt/pki</ContainerDir>
       <Mode>rw</Mode>
+      <Name>salt master /etc/salt/pki</Name>
+      <Description>salt master /etc/salt/pki</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/salt-master/etc/salt/master.d</HostDir>
       <ContainerDir>/etc/salt/master.d</ContainerDir>
       <Mode>rw</Mode>
+      <Name>salt master /etc/salt/master.d</Name>
+      <Description>salt master /etc/salt/master.d</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/salt-master/srv/salt</HostDir>
       <ContainerDir>/srv/salt</ContainerDir>
       <Mode>rw</Mode>
+      <Name>salt master /srv/salt</Name>
+      <Description>salt master /srv/salt</Description>
     </Volume>
   </Data>
   <Banner>https://github.com/cmconner156/salt-master/blob/master/saltstack.jpg?raw=true</Banner>

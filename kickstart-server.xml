@@ -19,44 +19,67 @@
     <Mode>eth0</Mode>
     <Publish>
       <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+	<Protocol>udp</Protocol>
+	<Name>DHCP udp</Name>
+	<Description>DHCP udp</Description>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+	<Protocol>tcp</Protocol>
+	<Name>DHCP tcp</Name>
+	<Description>DHCP tcp</Description>
+      </Port>
+      <Port>
         <HostPort>69</HostPort>
         <ContainerPort>69</ContainerPort>
-        <Protocol>udp</Protocol>
+	<Protocol>udp</Protocol>
+	<Name>xinetd UDP</Name>
+	<Description>xinetd UDP</Description>
       </Port>
       <Port>
         <HostPort>69</HostPort>
         <ContainerPort>69</ContainerPort>
         <Protocol>tcp</Protocol>
+	<Name>xinetd TCP</Name>
+	<Description>xinetd TCP</Description>
       </Port>
       <Port>
         <HostPort>80</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
+	<Name>HTTP TCP</Name>
+	<Description>HTTP TCP</Description>
       </Port>
       <Port>
         <HostPort>443</HostPort>
         <ContainerPort>443</ContainerPort>
         <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>547</HostPort>
-        <ContainerPort>547</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>547</HostPort>
-        <ContainerPort>547</ContainerPort>
-	<Protocol>tcp</Protocol>
+	<Name>HTTPS TCP</Name>
+	<Description>HTTPS TCP</Description>
       </Port>
       <Port>
         <HostPort>25150</HostPort>
         <ContainerPort>25150</ContainerPort>
 	<Protocol>tcp</Protocol>
+	<Name>Cobbler Unknown TCP</Name>
+	<Description>Cobbler Unknown TCP</Description>
       </Port>
       <Port>
         <HostPort>25151</HostPort>
         <ContainerPort>25151</ContainerPort>
 	<Protocol>tcp</Protocol>
+	<Name>Cobbler Python TCP</Name>
+	<Description>Cobbler Python TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>55135</HostPort>
+        <ContainerPort>55135</ContainerPort>
+	<Protocol>tcp</Protocol>
+	<Name>Unknown DHCP</Name>
+	<Description>Unknown DHCP</Description>
       </Port>
     </Publish>
   </Networking>
@@ -64,10 +87,8 @@
     <Variable>
       <Name>VAR1</Name>
       <Value>var1</Value>
-    </Variable>
-    <Variable>
-      <Name>VAR2</Name>
-      <Value>var2</Value>
+      <Name>Unknown VAR</Name>
+      <Description>Unknown VAR</Description>
     </Variable>
   </Environment>
   <Data>
@@ -75,36 +96,57 @@
       <HostDir>/sys/fs/cgroup</HostDir>
       <ContainerDir>/sys/fs/cgroup</ContainerDir>
       <Mode>ro</Mode>
+      <Name>cgroup directory for systemd</Name>
+      <Description>cgroup directory for systemd</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/run</HostDir>
       <ContainerDir>/run</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /run</Name>
+      <Description>kickstart /run</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/mnt</HostDir>
       <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /mnt</Name>
+      <Description>kickstart /mnt</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/tftpboot</HostDir>
       <ContainerDir>/var/lib/tftpboot</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /var/lib/tftpboot</Name>
+      <Description>kickstart /var/lib/tftpboot</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/cobbler/etc</HostDir>
       <ContainerDir>/etc/cobbler</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /etc/cobbler</Name>
+      <Description>kickstart /etc/cobbler</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/cobbler/lib</HostDir>
       <ContainerDir>/var/lib/cobbler</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /var/lib/cobbler</Name>
+      <Description>kickstart /var/lib/cobbler</Description>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/kickstart-server/cobbler/www</HostDir>
       <ContainerDir>/var/www/cobbler</ContainerDir>
       <Mode>rw</Mode>
+      <Name>kickstart /var/www/cobbler</Name>
+      <Description>kickstart /var/www/cobbler</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/salt</HostDir>
+      <ContainerDir>/etc/salt</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /etc/salt</Name>
+      <Description>kickstart Salt Cloud config for creating VMs</Description>
     </Volume>
   </Data>
   <Banner>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Banner>
