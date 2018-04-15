@@ -142,11 +142,25 @@
       <Description>kickstart /var/www/cobbler</Description>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/kickstart-server/salt</HostDir>
-      <ContainerDir>/etc/salt</ContainerDir>
+      <HostDir>/mnt/user/appdata/kickstart-server/cloud.maps.d</HostDir>
+      <ContainerDir>/etc/salt/cloud.maps.d</ContainerDir>
       <Mode>rw</Mode>
-      <Name>kickstart /etc/salt</Name>
-      <Description>kickstart Salt Cloud config for creating VMs</Description>
+      <Name>kickstart /etc/salt/cloud.maps.d</Name>
+      <Description>kickstart Salt Cloud config for creating VMs cloud.maps.d</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/cloud.profiles.d</HostDir>
+      <ContainerDir>/etc/salt/cloud.profiles.d</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /etc/salt/cloud.profiles.d</Name>
+      <Description>kickstart Salt Cloud config for creating VMs cloud.profiles.d</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/kickstart-server/cloud.providers.d</HostDir>
+      <ContainerDir>/etc/salt/cloud.providers.d</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>kickstart /etc/salt/cloud.providers.d</Name>
+      <Description>kickstart Salt Cloud config for creating VMs cloud.providers.d</Description>
     </Volume>
   </Data>
   <Banner>https://github.com/cmconner156/kickstart-server/blob/master/cobbler.png?raw=true</Banner>
