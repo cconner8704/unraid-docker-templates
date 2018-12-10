@@ -13,6 +13,7 @@
   <Registry>https://hub.docker.com/r/cmconner156/kickstart-server/</Registry>
   <GitHub>https://github.com/cmconner156/kickstart-server.git</GitHub>
   <Repository>cmconner156/kickstart-server</Repository>
+  <!-- BindTime binds the timezone for you -->
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Networking>
