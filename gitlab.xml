@@ -13,11 +13,10 @@
   <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
   <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
   <Repository>gitlab/gitlab-ce</Repository>
-  <!-- BindTime binds the timezone for you -->
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>host</Mode>
+    <Mode>custom</Mode>
     <Publish>
       <Port>
         <HostPort>443</HostPort>
