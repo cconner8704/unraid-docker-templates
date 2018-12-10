@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>GitLab</Category>
+  <Name>gitlab</Name>
+  <Description>
+    Docker GitLab
+  </Description>
+  <Overview>
+    Docker GitLab
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
+  <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
+  <Repository>gitlab/gitlab-ce</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>GitLab 443</Name>
+        <Description>GitLab tcp 443</Description>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>GitLab 80</Name>
+        <Description>GitLab tcp 80</Description>
+      </Port>
+      <Port>
+        <HostPort>22</HostPort>
+        <ContainerPort>22</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>GitLab 22</Name>
+        <Description>GitLab tcp 22</Description>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>VAR1</Name>
+      <Value>var1</Value>
+      <Name>Var setup Reminder</Name>
+      <Description>Var setup reminder</Description>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab/config</HostDir>
+      <ContainerDir>/etc/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>gitlab /etc/gitlab</Name>
+      <Description>gitlab /etc/gitlab</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab/logs</HostDir>
+      <ContainerDir>/var/log/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>gitlab /var/log/gitlab</Name>
+      <Description>gitlab /var/log/gitlab</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab/data</HostDir>
+      <ContainerDir>/var/opt/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>gitlab /var/opt/gitlab</Name>
+      <Description>gitlab /var/opt/gitlab</Description>
+    </Volume>
+  </Data>
+  <Banner>https://gitlab.com/gitlab-com/gitlab-artwork/blob/master/logo/logo.jpg?raw=true</Banner>
+  <Icon>https://gitlab.com/gitlab-com/gitlab-artwork/blob/master/logo/logo.jpg?raw=true</Icon>
+</Container>
