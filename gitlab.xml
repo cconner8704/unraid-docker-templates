@@ -17,7 +17,7 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>custom</Mode>
+    <Mode>host</Mode>
     <Publish>
       <Port>
         <HostPort>443</HostPort>
