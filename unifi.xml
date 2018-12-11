@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>Unifi</Category>
+  <Name>unifi</Name>
+  <Description>
+    Docker Unifi Controller
+  </Description>
+  <Overview>
+    Docker Unifi Controller
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
+  <Registry>https://hub.docker.com/r/jacobalberty/unifi/</Registry>
+  <GitHub>https://github.com/jacobalberty/unifi-docker</GitHub>
+  <Repository>jacobalberty/unifi</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>eth0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3478</HostPort>
+        <ContainerPort>3478</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>Unifi 3478 UDP</Name>
+        <Description>Unifi 3478 UDP</Description>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>Unifi 8080 TCP</Name>
+        <Description>Unifi 8080 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>8443</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>Unifi 8443 TCP</Name>
+        <Description>Unifi 8443 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>10001</HostPort>
+        <ContainerPort>10001</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>Unifi 10001 UDP</Name>
+        <Description>Unifi 10001 UDP</Description>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+      <Description>TimeZone</Description>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/unifi</HostDir>
+      <ContainerDir>/unifi</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>Unifi /unifi</Name>
+      <Description>Unifi /unifi</Description>
+    </Volume>
+  </Data>
+</Container>
