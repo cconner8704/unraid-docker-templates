@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>BindDHCP</Category>
+  <Name>bind-dhcp</Name>
+  <Description>
+    Docker bind-dhcp
+  </Description>
+  <Overview>
+    Docker bind-dhcp
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
+  <Registry>https://hub.docker.com/r/cmconner156/bind-dhcp/</Registry>
+  <GitHub>https://github.com/cmconner156/bind-dhcp.git</GitHub>
+  <Repository>cmconner156/bind-dhcp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>eth0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>DNS 53 UDP</Name>
+        <Description>DNS 53 UDP</Description>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>DNS 53 TCP</Name>
+        <Description>DNS 53 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>DHCP 67 UDP</Name>
+        <Description>DHCP 67 UDP</Description>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>DHCP 67 TCP</Name>
+        <Description>DHCP 67 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>68</HostPort>
+        <ContainerPort>68</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>DHCP 68 UDP</Name>
+        <Description>DHCP 68 UDP</Description>
+      </Port>
+      <Port>
+        <HostPort>68</HostPort>
+        <ContainerPort>68</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>DHCP 68 TCP</Name>
+        <Description>DHCP 68 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>547</HostPort>
+        <ContainerPort>547</ContainerPort>
+	<Protocol>udp</Protocol>
+        <Name>DHCP 547 UDP</Name>
+        <Description>DHCP 547 UDP</Description>
+      </Port>
+      <Port>
+        <HostPort>547</HostPort>
+        <ContainerPort>547</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>DHCP 547 TCP</Name>
+        <Description>DHCP 547 TCP</Description>
+      </Port>
+      <Port>
+        <HostPort>10000</HostPort>
+        <ContainerPort>10000</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>Webmin 10000 TCP</Name>
+        <Description>Webmin 10000 TCP</Description>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>ROOT_PASSWORD</Name>
+      <Value>root</Value>
+      <Description>Webmin and os root pass</Description>
+    </Variable>
+    <Variable>
+      <Name>INTERFACES</Name>
+      <Value>eth0</Value>
+      <Description>Interface</Description>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/bind-dhcp</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>bind-dhcp /data</Name>
+      <Description>bind-dhcp /data</Description>
+    </Volume>
+</Container>
