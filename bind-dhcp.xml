@@ -12,7 +12,7 @@
   <Support>http://lime-technology.com/forum/index.php?topic=</Support>
   <Registry>https://hub.docker.com/r/cmconner156/bind-dhcp/</Registry>
   <GitHub>https://github.com/cmconner156/bind-dhcp.git</GitHub>
-  <Repository>cmconner156/bind-dhcp</Repository>
+  <Repository>cmconner156/bind-dhcp:latest</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
