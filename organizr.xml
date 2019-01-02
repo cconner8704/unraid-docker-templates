@@ -11,7 +11,7 @@
   </Overview>
   <Support>http://lime-technology.com/forum/index.php?topic=</Support>
   <Registry>https://hub.docker.com/r/lsiocommunity/organizr/</Registry>
-  <GitHub>https://github.com/linuxserver/docker-organizr</Registry>
+  <GitHub>https://github.com/linuxserver/docker-organizr</GitHub>
   <Repository>lsiocommunity/organizr</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
