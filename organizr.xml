@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Beta>False</Beta>
+  <Category>Organizr</Category>
+  <Name>organizr</Name>
+  <Description>
+    Docker Organizr
+  </Description>
+  <Overview>
+    Docker Organizr
+  </Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=</Support>
+  <Registry>https://hub.docker.com/r/lsiocommunity/organizr/</Registry>
+  <GitHub>https://github.com/linuxserver/docker-organizr</Registry>
+  <Repository>lsiocommunity/organizr</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>eth0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+	<Protocol>tcp</Protocol>
+        <Name>Organizr 80 TCP</Name>
+        <Description>Organizr 80 TCP</Description>
+      </Port>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>America/New_York</Value>
+      <Description>TimeZone</Description>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/organizr</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>Organizr /config</Name>
+      <Description>Organizr /config</Description>
+    </Volume>
+  </Data>
+  <Banner>https://raw.githubusercontent.com/causefx/Organizr/master/images/organizr_logo.png?raw=true</Banner>
+  <Icon>https://raw.githubusercontent.com/causefx/Organizr/master/images/organizr_logo.png?raw=true</Icon>
+</Container>
