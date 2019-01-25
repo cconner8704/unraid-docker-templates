@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>traefik</Name>
+  <Description>Traefik template foor Unraid</Description>
+  <Registry>https://hub.docker.com/_/traefik</Registry>
+  <Repository>traefik</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>eth0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/letsencrypt</HostDir>
+      <ContainerDir>/etc/letsencrypt</ContainerDir>
+      <Mode>ro</Mode>
+      <Name>Letsencrypt certs</Name>
+      <Description>Local location of nginx created letsencrypt certs</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+      <Name>Docker sock</Name>
+      <Description>Give access to other docker containers</Description>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/traefik/traefik.toml</HostDir>
+      <ContainerDir>/traefik.toml</ContainerDir>
+      <Mode>ro</Mode>
+      <Name>Traefik config</Name>
+      <Description>Traefik config </Description>
+    </Volume>
+  </Data>
+  <Labels>
+    <Label>
+      <Value>false</Value>
+      <Name>traefik.enable</Name>
+      <Mode/>
+    </Label>
+  </Labels>
+  <Icon>https://raw.githubusercontent.com/containous/traefik/master/docs/img/traefik.icon.png</Icon>
+</Container>
